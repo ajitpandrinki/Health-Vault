@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <rect width="1200" height="1600" fill="#f3f0f7"/>
+  <rect x="80" y="72" width="1040" height="1455" rx="18" fill="#fff" stroke="#6a527d" stroke-width="4"/>
+  <text x="125" y="170" font-family="Georgia,serif" font-size="54" font-weight="700" fill="#513766">APOLLO DIAGNOSTICS</text>
+  <text x="125" y="220" font-family="Arial,sans-serif" font-size="24" fill="#756d7d">LABORATORY REPORT · DEMO DOCUMENT</text>
+  <text x="1065" y="170" text-anchor="end" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#d56a39">DEMO</text>
+  <line x1="125" y1="275" x2="1075" y2="275" stroke="#ddd3e5" stroke-width="3"/>
+  <text x="140" y="355" font-family="Arial,sans-serif" font-size="27" fill="#716779">Patient</text><text x="470" y="355" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#32283a">Demo Patient</text>
+  <text x="140" y="410" font-family="Arial,sans-serif" font-size="27" fill="#716779">Collected</text><text x="470" y="410" font-family="Arial,sans-serif" font-size="27" fill="#32283a">15 September 2026</text>
+  <line x1="125" y1="500" x2="1075" y2="500" stroke="#ddd3e5" stroke-width="3"/>
+  <text x="150" y="585" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#513766">TEST</text><text x="760" y="585" text-anchor="end" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#513766">RESULT</text><text x="1030" y="585" text-anchor="end" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#513766">UNIT</text>
+  <text x="150" y="675" font-family="Arial,sans-serif" font-size="28" fill="#32283a">Complete blood count</text><text x="760" y="675" text-anchor="end" font-family="Arial,sans-serif" font-size="28" fill="#32283a">Within range</text><text x="1030" y="675" text-anchor="end" font-family="Arial,sans-serif" font-size="26" fill="#716779">—</text>
+  <text x="150" y="750" font-family="Arial,sans-serif" font-size="28" fill="#32283a">Vitamin D</text><text x="760" y="750" text-anchor="end" font-family="Arial,sans-serif" font-size="28" fill="#32283a">32</text><text x="1030" y="750" text-anchor="end" font-family="Arial,sans-serif" font-size="26" fill="#716779">ng/mL</text>
+  <text x="150" y="825" font-family="Arial,sans-serif" font-size="28" fill="#32283a">Blood glucose</text><text x="760" y="825" text-anchor="end" font-family="Arial,sans-serif" font-size="28" fill="#32283a">96</text><text x="1030" y="825" text-anchor="end" font-family="Arial,sans-serif" font-size="26" fill="#716779">mg/dL</text>
+  <line x1="130" y1="900" x2="1070" y2="900" stroke="#ddd3e5" stroke-width="3"/>
+  <text x="150" y="1010" font-family="Arial,sans-serif" font-size="27" fill="#716779">Report status</text><text x="500" y="1010" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#513766">Final</text>
+  <rect x="140" y="1190" width="920" height="170" rx="14" fill="#f3f0f7"/>
+  <text x="180" y="1255" font-family="Arial,sans-serif" font-size="24" fill="#513766">Fictional lab report for testing the HealthVault upload flow.</text>
+  <text x="180" y="1305" font-family="Arial,sans-serif" font-size="24" fill="#513766">Values are invented and have no clinical meaning.</text>
+</svg>

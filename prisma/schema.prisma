@@ -1,0 +1,172 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  OWNER
+  ADMIN
+  MEMBER
+  VIEWER
+}
+
+enum ClaimStatus {
+  DRAFT
+  SUBMITTED
+  UNDER_REVIEW
+  APPROVED
+  REJECTED
+  PAID
+}
+
+enum VisitType {
+  OPD
+  IPD
+  EMERGENCY
+  LAB
+  TELECONSULT
+}
+
+enum DocumentType {
+  BILL
+  PRESCRIPTION
+  REPORT
+  INSURANCE
+  OTHER
+}
+
+enum BillCategory {
+  CONSULTATION
+  DIAGNOSTICS
+  MEDICINES
+  ROOM
+  OTHER
+}
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  passwordHash  String
+  fullName      String
+  familyId      String
+  role          UserRole @default(MEMBER)
+  memberId      String?  @unique
+  createdAt     DateTime @default(now())
+
+  family        Family @relation(fields: [familyId], references: [id])
+  familyMember  FamilyMember? @relation(fields: [memberId], references: [id])
+  documents     Document[]
+  claims        InsuranceClaim[]
+  visits        HospitalVisit[]
+}
+
+model Family {
+  id          String   @id @default(uuid())
+  name        String
+  createdAt   DateTime @default(now())
+  users       User[]
+  members     FamilyMember[]
+  documents   Document[]
+  claims      InsuranceClaim[]
+  visits      HospitalVisit[]
+}
+
+model FamilyMember {
+  id            String   @id @default(uuid())
+  familyId      String
+  name          String
+  relation      String
+  dateOfBirth   DateTime?
+  bloodGroup    String?
+  phone         String?
+  avatarColor   String?
+  createdAt     DateTime @default(now())
+
+  family        Family @relation(fields: [familyId], references: [id])
+  user          User?
+  documents     Document[]
+  claims        InsuranceClaim[]
+  visits        HospitalVisit[]
+}
+
+model Document {
+  id                String        @id @default(uuid())
+  familyId          String
+  userId            String?
+  memberId          String?
+  title             String
+  type              DocumentType
+  hospital          String?
+  date              DateTime?
+  amount            Decimal?      @db.Decimal(12,2)
+  notes             String?
+  fileName          String?
+  fileUrl           String?
+  tags              String[]      @default([])
+  extractedByAi     Boolean       @default(false)
+  createdAt         DateTime      @default(now())
+  categories        DocumentCategory[]
+
+  family            Family        @relation(fields: [familyId], references: [id])
+  user              User?         @relation(fields: [userId], references: [id])
+  member            FamilyMember? @relation(fields: [memberId], references: [id])
+}
+
+model DocumentCategory {
+  id          String @id @default(uuid())
+  documentId  String
+  category    BillCategory
+  amount      Decimal @db.Decimal(12,2)
+  label       String?
+
+  document    Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+}
+
+model InsuranceClaim {
+  id             String       @id @default(uuid())
+  familyId       String
+  userId         String?
+  memberId       String?
+  title          String
+  insurer        String
+  policyNumber   String
+  claimNumber    String?
+  hospital       String?
+  amountClaimed  Decimal      @db.Decimal(12,2)
+  amountApproved Decimal?     @db.Decimal(12,2)
+  status         ClaimStatus  @default(DRAFT)
+  submittedAt    DateTime?
+  notes          String?
+  documentIds    String[]     @default([])
+  createdAt      DateTime     @default(now())
+
+  family         Family       @relation(fields: [familyId], references: [id])
+  user           User?        @relation(fields: [userId], references: [id])
+  member         FamilyMember? @relation(fields: [memberId], references: [id])
+}
+
+model HospitalVisit {
+  id            String      @id @default(uuid())
+  familyId      String
+  userId        String?
+  memberId      String?
+  hospital      String
+  doctor        String?
+  department    String?
+  visitType     VisitType
+  date          DateTime
+  reason        String?
+  followUpDate  DateTime?
+  amount        Decimal?    @db.Decimal(12,2)
+  notes         String?
+  documentIds   String[]    @default([])
+  createdAt     DateTime    @default(now())
+
+  family        Family      @relation(fields: [familyId], references: [id])
+  user          User?       @relation(fields: [userId], references: [id])
+  member        FamilyMember? @relation(fields: [memberId], references: [id])
+}

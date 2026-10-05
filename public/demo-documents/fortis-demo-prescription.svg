@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <rect width="1200" height="1600" fill="#edf4f1"/>
+  <rect x="86" y="70" width="1028" height="1460" rx="20" fill="#ffffff" stroke="#496b70" stroke-width="4"/>
+  <text x="130" y="170" font-family="Georgia,serif" font-size="58" font-weight="700" fill="#315b62">FORTIS HEALTHCARE</text>
+  <text x="130" y="220" font-family="Arial,sans-serif" font-size="24" fill="#66787a">PRESCRIPTION · FICTIONAL DEMO</text>
+  <text x="1040" y="170" text-anchor="end" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#dc6c35">DEMO</text>
+  <line x1="130" y1="275" x2="1070" y2="275" stroke="#c8d9d5" stroke-width="3"/>
+  <text x="140" y="355" font-family="Arial,sans-serif" font-size="27" fill="#607174">Patient</text><text x="460" y="355" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#253b40">Demo Patient</text>
+  <text x="140" y="410" font-family="Arial,sans-serif" font-size="27" fill="#607174">Date</text><text x="460" y="410" font-family="Arial,sans-serif" font-size="27" fill="#253b40">08 September 2026</text>
+  <text x="140" y="465" font-family="Arial,sans-serif" font-size="27" fill="#607174">Doctor</text><text x="460" y="465" font-family="Arial,sans-serif" font-size="27" fill="#253b40">Dr. Meera Iyer</text>
+  <line x1="130" y1="530" x2="1070" y2="530" stroke="#c8d9d5" stroke-width="3"/>
+  <text x="150" y="650" font-family="Georgia,serif" font-size="100" fill="#315b62">Rx</text>
+  <text x="320" y="650" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#253b40">Medicines</text>
+  <text x="320" y="720" font-family="Arial,sans-serif" font-size="27" fill="#253b40">1. Sample medicine A · once daily after food</text>
+  <text x="320" y="785" font-family="Arial,sans-serif" font-size="27" fill="#253b40">2. Sample medicine B · twice daily for 5 days</text>
+  <text x="320" y="850" font-family="Arial,sans-serif" font-size="27" fill="#253b40">3. Sample medicine C · as directed</text>
+  <line x1="150" y1="970" x2="1050" y2="970" stroke="#c8d9d5" stroke-width="3"/>
+  <text x="150" y="1050" font-family="Arial,sans-serif" font-size="26" fill="#607174">Advice</text>
+  <text x="150" y="1115" font-family="Arial,sans-serif" font-size="27" fill="#253b40">Rest well, stay hydrated, and attend the scheduled follow-up.</text>
+  <rect x="140" y="1260" width="920" height="150" rx="14" fill="#edf4f1"/>
+  <text x="180" y="1325" font-family="Arial,sans-serif" font-size="24" fill="#315b62">Fictional prescription for upload testing only.</text>
+  <text x="180" y="1375" font-family="Arial,sans-serif" font-size="24" fill="#315b62">Not medical advice. Do not use as a real prescription.</text>
+</svg>
